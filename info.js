@@ -60,6 +60,7 @@ let info = {
         "PHP",
         "SQL",
         "NoSQL",
+        "Java",
       ],
       icon: "fa fa-code"
     },
@@ -87,10 +88,12 @@ let info = {
       title: "Operating Systems & Tools",
       info: [
         "Windows",
+        "Mac",
         "Android",
         "Agile",
         "JIRA",
         "Firebase",
+        "Cypress"
       ],
       icon: "fas fa-tools"
     },
@@ -142,33 +145,33 @@ let info = {
         "	<p><strong>Action Execution</strong>: Based on the webhook payload, I executed the desired actions or triggered processes within my application. This could include updating data, sending notifications, invoking external APIs, or any other custom functionality needed for seamless integration.</p></li></ol>"
     },
     {
-      name: "COUERA",
+      name: "AdviseCampus",
       pictures: [
         {
-          img: require("./src/assets/portfolio/couera/one.png")
+          img: require("./src/assets/portfolio/advisecampus/one.png")
         },
         {
-          img: require("./src/assets/portfolio/couera/two.png")
+          img: require("./src/assets/portfolio/advisecampus/two.png")
         },
         {
-          img: require("./src/assets/portfolio/couera/three.png")
+          img: require("./src/assets/portfolio/advisecampus/three.png")
         },
         {
-          img: require("./src/assets/portfolio/couera/four.png")
+          img: require("./src/assets/portfolio/advisecampus/four.png")
         },
         {
-          img: require("./src/assets/portfolio/couera/five.png")
+          img: require("./src/assets/portfolio/advisecampus/five.png")
         }
       ],
       technologies: ["Angular", "Directus", "Laravel"],
       category: "Web Application",
       date: "2022 - 2023",
       github: "",
-      visit: "https://www.couera.com",
+      visit: "https://www.advisecampus.com",
       description:
-        "<p>Couera is a common student platform with global recognition and reputation, provide consultation and advice to students who desire to pursue higher education abroad.</p>" +
+        "<p>AdviseCampus is a common student platform with global recognition and reputation, provide consultation and advice to students who desire to pursue higher education abroad.</p>" +
         "<p>During the project, I accomplished the following tasks:</p> <ol><li> <p><strong>Collaborated with Junior Frontend Developer</strong>: I worked closely with a junior frontend developer, assisting and guiding them in their tasks. We collaborated effectively to ensure a smooth workflow and successful completion of frontend development tasks.</p> </li> <li> <p><strong>Implemented Pagination</strong>: I integrated pagination functionality between pages to enhance the user experience. This feature allows users to navigate through large datasets or lists of content efficiently by displaying a limited number of items per page.</p></li><li><p><strong>Developed Search and Filter Functionality</strong>: I implemented search and filter functionality to improve data retrieval and user interaction. Users can now search for specific items or apply filters to narrow down the results based on their preferences.</p></li><li><p><strong>Implemented Form Validations</strong>: I added form validations to ensure data integrity and prevent erroneous or incomplete submissions. By validating form inputs on the frontend and backend, we were able to provide a more robust and user-friendly experience.</p></li><li><p><strong>Structured and Connected the Database with Frontend</strong>: I designed and implemented an appropriate database structure for the project. This involved defining tables, relationships, and data schemas. I also established the necessary connections between the frontend and the database, enabling seamless data exchange and retrieval.</p></li><li><p><strong>Integrated Email Service Provider using Laravel API</strong>: I incorporated an email service provider into the project, utilizing Laravel&#39;s API capabilities. This integration allowed us to leverage the email service provider&#39;s features for sending transactional emails, notifications, or other relevant communications to users.</p></li>	<li>"
-        + "<p><strong>Stripe Payment Gateway Integration</strong>: I successfully integrated the Stripe payment gateway into the COUERA Platform. This involved setting up the necessary configurations and implementing the required API calls to enable secure and seamless payment processing. Users can now make payments for various services within the platform using Stripe.</p> </li></ol>"
+        + "<p><strong>Stripe Payment Gateway Integration</strong>: I successfully integrated the Stripe payment gateway into the AdviseCampus Platform. This involved setting up the necessary configurations and implementing the required API calls to enable secure and seamless payment processing. Users can now make payments for various services within the platform using Stripe.</p> </li></ol>"
     },
     {
       name: "LEADERS IN HEALTH",
@@ -202,6 +205,29 @@ let info = {
         "<p><strong>Profile Information Update</strong>: Within the members area, users can update their profile information. They have the ability to modify personal details such as their name, email address, contact information, and other relevant information associated with their user profile. This allows users to keep their profiles up to date.</p> </li><li>" +
         "<p><strong>Akademi Page</strong>: I designed and developed the &quot;Akademi&quot; page, which contain specific information related to events, courses, or educational content. These pages are structured to present the data in an organized manner for easy navigation and understanding.</p>  </li>" +
         "<li> <p><strong>Data Structure</strong>: The data structure implemented for the &quot;Akademi&quot; pages follows a logical organization that ensures efficient storage and retrieval of relevant information. It may include entities such as events.&nbsp;all interconnected based on their relationships and dependencies.</p> </li> </ol>"
+    },
+    {
+      name: "MIDADTEK",
+      pictures: [
+        {
+          img: require("./src/assets/portfolio/midadtek/one.png")
+        },
+        {
+          img: require("./src/assets/portfolio/midadtek/two.png")
+        },
+        {
+          img: require("./src/assets/portfolio/midadtek/three.png")
+        }
+        
+      ],
+      technologies: ["Wordpress", "MYSQL", "Elementor"],
+      category: "Web Application",
+      date: "2019",
+      github: "",
+      visit: "http://midadtek.com/en/",
+      description:
+      '<p>Midad-Tek is a software company works in software development in Turkey since 2019. specialized in the field of IT and Internet solutions and Web design and programming, smart phone application programming, e-marketing and advertising services.</p>'+
+      '<p>I Developed and launched &#39;Midadtek&#39; company website using WordPress, integrating Elementor, plugins, interactive forms, and a robust database. Achieved seamless server deployment, creating a user-friendly and dynamic online platform.</p>'
     },
   ],
   mobile: [
