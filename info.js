@@ -1,7 +1,7 @@
 let info = {
   name: "Hisham Al Hafez",
   logo_name: "Hisham",
-  flat_picture: require("./src/assets/profile.png"),
+  flat_picture: require("./src/assets/profile.jpg"),
   config: {
     use_cookies: true,
     navbar: {
