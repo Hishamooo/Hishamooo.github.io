@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>
+      // GitHub Pages SPA routing — 404.html redirects deep links to /?p=<path>.
+      // Restore the real URL before vue-router reads window.location.
+      (function () {
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p) {
+          window.history.replaceState(null, '', '/' + p + window.location.hash);
+        }
+      })();
+    </script>
+
     <title>Hisham Al Hafez | Senior Frontend Developer in Madrid</title>
     <meta name="description" content="Senior Frontend Developer specializing in Vue.js, Nuxt.js, TypeScript, complex SaaS applications and LLM/RAG integrations. Based in Madrid, Spain." />
     <meta name="author" content="Hisham Al Hafez" />
