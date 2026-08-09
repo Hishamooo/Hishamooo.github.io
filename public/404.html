@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hisham Al Hafez | Senior Frontend Developer</title>
+    <script>
+      // GitHub Pages SPA routing — redirects 404s back to index with path encoded
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1).join('/') + '/?p=' +
+        encodeURIComponent(l.pathname.slice(1) + l.search) +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

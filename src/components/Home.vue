@@ -11,7 +11,7 @@
     >
       <div class="row align-items-center">
         <div class="col-xl-6 col-bg-6 col-md-6 col-sm-12 text-center mb-5">
-          <img style=" border-radius: 5%;" :src="picture" />
+          <img style=" " :src="picture" />
         </div>
         <div class="col-xl-6 col-bg-6 col-md-6 col-sm-12 pt-5">
           <span
@@ -118,7 +118,6 @@ img {
 }
 
 p {
-  text-align: justify;
   font-weight: 400;
 }
 

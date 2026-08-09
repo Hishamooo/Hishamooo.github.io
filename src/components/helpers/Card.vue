@@ -8,7 +8,7 @@
         'bg-dark3': nightMode,
       }"
     >
-      <div style="height: 180px;">
+      <div style="height: 150px;">
         <img
           class="card-img-top"
           :src="portfolio.pictures[0].img"

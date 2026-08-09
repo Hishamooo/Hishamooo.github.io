@@ -26,6 +26,30 @@
       />
 
       <vue-tabs :activeTextColor="!nightMode ? '#535A5E' : '#dfdfdf'">
+        <v-tab title="All Projects">
+          <br />
+          <div class="row">
+            <div
+              class="col-xl-4 col-bg-4 col-md-6 col-sm-12"
+              v-for="(portfolio, idx) in allProjectsSorted"
+              :key="portfolio.name + portfolio.date"
+            >
+              <Card
+                :style="{ 'transition-delay': (idx % 3) / 4.2 + 's' }"
+                :portfolio="portfolio"
+                @show="showModalFn"
+                data-aos="fade-up"
+                :nightMode="nightMode"
+                data-aos-offset="100"
+                data-aos-delay="10"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="true"
+              />
+            </div>
+          </div>
+        </v-tab>
         <v-tab title="Web Applications">
           <br />
           <div class="row">
@@ -136,7 +160,7 @@ export default {
       showDesignModal: false,
       modal_info: {},
       design_modal_info: {},
-      number: 4,
+      number: 6,
       showBtn: "show more",
       shower: 0,
       data: [
@@ -157,6 +181,20 @@ export default {
       for (var i = 0; i < this.number; i++) {
         this.portfolio_info.push(this.web_info[i]);
       }
+    },
+  },
+  computed: {
+    allProjectsSorted() {
+      // Merge web and mobile, sort by date descending
+      const all = [...this.web_info, ...this.mobile_info];
+      // Extract year from date string for sorting (handles ranges like '2022 - 2023')
+      function extractYear(dateStr) {
+        if (!dateStr) return 0;
+        // Get the last year in the string
+        const match = dateStr.match(/(\d{4})(?!.*\d{4})/);
+        return match ? parseInt(match[1]) : 0;
+      }
+      return all.slice().sort((a, b) => extractYear(b.date) - extractYear(a.date));
     },
   },
   methods: {
