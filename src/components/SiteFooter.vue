@@ -3,7 +3,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="brand-name">Hisham Al Hafez</span>
-        <p class="footer-tagline">Senior Frontend Developer · Madrid, Spain</p>
+        <p class="footer-tagline">Software Developer · Madrid, Spain</p>
       </div>
 
       <nav class="footer-nav" aria-label="Footer navigation">

@@ -11,7 +11,7 @@ let info = {
 
   // Hero section
   hero: {
-    eyebrow: "Senior Frontend Developer @ SEDIWORK · Madrid, Spain",
+    eyebrow: "Software Developer @ SEDIDOC · Madrid, Spain",
     heading: "Building complex SaaS products and AI-enabled user experiences",
     description:
       "I specialise in Vue.js, Nuxt.js and TypeScript, with full-stack experience across Directus, Laravel, REST APIs and relational databases. At SEDIDOC I work on SEDIWORK, a healthcare SaaS platform for hospital workforce and rotation planning, spanning complex frontend workflows, application architecture, backend integrations, automated testing and an LLM-powered assistant built on structured application context and Retrieval-Augmented Generation.",
@@ -34,7 +34,7 @@ let info = {
   },
 
   about: {
-    text: "I'm a Senior Frontend Developer based in Madrid, Spain, with 7+ years of experience building production web and mobile applications for international teams. I specialise in Vue.js, Nuxt.js and TypeScript, with full-stack experience across Directus, Laravel, REST APIs and relational databases. At SEDIDOC I work on SEDIWORK, a healthcare SaaS platform for hospital workforce and rotation planning — spanning complex frontend workflows, application architecture, backend integrations, automated testing and an LLM-powered assistant using structured application context and Retrieval-Augmented Generation (RAG). I also work with Angular, Flutter, Firebase, Stripe, Cypress, Vitest, Docker, CI/CD and WordPress, and contribute regularly through code reviews and technical discussions. I enjoy solving complex product problems, improving architecture and building reliable user experiences from idea to production.",
+    text: "I'm a Software Developer based in Madrid, Spain, with 7+ years of experience building production web and mobile applications for international teams. I specialise in Vue.js, Nuxt.js and TypeScript, with full-stack experience across Directus, Laravel, REST APIs and relational databases. At SEDIDOC I work on SEDIWORK, a healthcare SaaS platform for hospital workforce and rotation planning — spanning complex frontend workflows, application architecture, backend integrations, automated testing and an LLM-powered assistant using structured application context and Retrieval-Augmented Generation (RAG). I also work with Angular, Flutter, Firebase, Stripe, Cypress, Vitest, Docker, CI/CD and WordPress, and contribute regularly through code reviews and technical discussions. I enjoy solving complex product problems, improving architecture and building reliable user experiences from idea to production.",
     facts: [
       "Based in Madrid, Spain",
       "7+ years of professional experience",
@@ -73,7 +73,7 @@ let info = {
       name: "SEDIDOC GmbH",
       place: "Germany — Remote",
       date: "June 2022 – Present",
-      position: "Full-Stack Developer — Frontend Focus",
+      position: "Software Developer",
       description:
         "Develop and maintain SEDIWORK, a healthcare SaaS platform for hospital workforce and rotation planning, including an integrated LLM-powered assistant and complex scheduling and organisational workflows.",
       bullets: [
@@ -188,7 +188,7 @@ let info = {
       tagline: "Healthcare SaaS platform for hospital workforce and rotation planning",
       description:
         "Healthcare SaaS platform for hospital workforce and rotation planning, including complex scheduling workflows and an integrated LLM-powered assistant.",
-      role: "Full-Stack Developer — Frontend Focus",
+      role: "Software Developer",
       company: "SEDIDOC GmbH",
       date: "June 2022 – Present",
       technologies: ["Vue 3", "Nuxt.js", "TypeScript", "Vuetify", "Pinia", "Directus", "PostgreSQL", "Cypress", "Vitest", "Docker"],
@@ -338,7 +338,7 @@ let info = {
       tagline: "Earlier version of the SEDIWORK healthcare platform with chat, OTP, Stripe payments and webhooks.",
       description:
         "The first version of SEDIWORK, a healthcare SaaS platform for hospital workforce planning. This version introduced core communication, payment and security features that formed the foundation for the platform.",
-      role: "Full-Stack Developer — Frontend Focus",
+      role: "Software Developer",
       company: "SEDIDOC GmbH",
       date: "2022 – 2023",
       technologies: ["Vue", "Vuetify", "Vuex", "Nuxt.js", "Directus", "Cypress"],

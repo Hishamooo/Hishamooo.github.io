@@ -44,7 +44,7 @@
         <div class="profile-wrap" v-if="picture">
           <img
             :src="picture"
-            alt="Hisham Al Hafez — Senior Frontend Developer"
+            alt="Hisham Al Hafez — Software Developer"
             class="profile-img"
             width="200"
             height="200"

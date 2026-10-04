@@ -66,7 +66,7 @@
           </div>
           <div class="hero-card-row">
             <span class="hero-card-label">Focus</span>
-            <span class="hero-card-value">Senior Frontend</span>
+            <span class="hero-card-value">Software Development</span>
           </div>
           <div class="hero-card-row">
             <span class="hero-card-label">Experience</span>

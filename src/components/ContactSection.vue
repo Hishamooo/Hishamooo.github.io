@@ -4,7 +4,7 @@
       <div class="contact-content" data-aos="fade-up">
         <h2 id="contact-heading" class="section-heading">Let's build something useful</h2>
         <p class="contact-intro">
-          I'm open to Senior Frontend, Full-Stack and selected Software Engineer in Test opportunities in Spain and across Europe.
+          I'm open to Software Developer, Frontend, Full-Stack and selected Software Engineer in Test opportunities in Spain and across Europe.
         </p>
 
         <div class="contact-actions">
