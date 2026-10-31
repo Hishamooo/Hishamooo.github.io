@@ -60,6 +60,24 @@
         <section class="detail-screenshots" aria-label="Project screenshots" v-if="project.pictures && project.pictures.length">
           <div class="container">
             <div class="screenshots-grid">
+              <figure v-if="project.cover" class="screenshot-figure">
+                <a
+                  class="screenshot-frame"
+                  :href="project.cover.img"
+                  target="_blank"
+                  rel="noopener"
+                  :aria-label="'Open full screenshot: ' + project.cover.alt"
+                >
+                  <img
+                    :src="project.cover.img"
+                    :alt="project.cover.alt"
+                    class="screenshot-image"
+                    loading="eager"
+                    @error="onImgError($event)"
+                  />
+                </a>
+                <figcaption v-if="project.cover.caption" class="screenshot-caption">{{ project.cover.caption }}</figcaption>
+              </figure>
               <figure
                 v-for="(pic, idx) in visibleScreenshots"
                 :key="idx"
@@ -76,7 +94,7 @@
                     :src="pic.img"
                     :alt="pic.alt"
                     class="screenshot-image"
-                    :loading="idx === 0 ? 'eager' : 'lazy'"
+                    :loading="idx === 0 && !project.cover ? 'eager' : 'lazy'"
                     @error="onImgError($event)"
                   />
                 </a>

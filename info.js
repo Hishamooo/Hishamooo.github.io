@@ -234,6 +234,7 @@ let info = {
       ],
       visit: "",
       ctaLabel: "View case study",
+      cover: { img: require("./src/assets/portfolio/sediwork-v3/login-cover-full.jpg"), alt: "SEDIWORK login page", caption: "SEDIWORK – smart rotation and shift planning for hospitals" },
       screenshotNote: "All screenshots show generated demo data: no real doctors, patients or hospitals.",
       pictures: [
         { img: require("./src/assets/portfolio/sediwork-v3/compact-view-full.jpg"), alt: "SEDIWORK compact month view of the shift plan, coloured by staffing", caption: "Compact month view I designed and built: a whole month of staffing on one screen" },
