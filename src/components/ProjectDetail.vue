@@ -66,13 +66,16 @@
                 class="screenshot-figure"
                 :class="{ 'screenshot-figure--featured': idx === 0 }"
               >
-                <img
-                  :src="pic.img"
-                  :alt="pic.alt"
-                  class="screenshot-image"
-                  :loading="idx === 0 ? 'eager' : 'lazy'"
-                  @error="onImgError($event)"
-                />
+                <div class="screenshot-frame">
+                  <img
+                    :src="pic.img"
+                    :alt="pic.alt"
+                    class="screenshot-image"
+                    :loading="idx === 0 ? 'eager' : 'lazy'"
+                    @error="onImgError($event)"
+                  />
+                </div>
+                <figcaption v-if="pic.caption" class="screenshot-caption">{{ pic.caption }}</figcaption>
               </figure>
             </div>
             <button
@@ -101,7 +104,17 @@
                 <p class="text-secondary" v-if="project.date">{{ project.date }}</p>
               </section>
 
-              <section class="detail-section" aria-labelledby="contributions-heading" v-if="project.contributions && project.contributions.length">
+              <section class="detail-section" aria-labelledby="highlights-heading" v-if="project.highlights && project.highlights.length">
+                <h2 id="highlights-heading">What I built</h2>
+                <div class="detail-highlights">
+                  <div class="highlight" v-for="h in project.highlights" :key="h.title">
+                    <h3>{{ h.title }}</h3>
+                    <p>{{ h.text }}</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="detail-section" aria-labelledby="contributions-heading" v-else-if="project.contributions && project.contributions.length">
                 <h2 id="contributions-heading">Key contributions</h2>
                 <ul class="detail-bullets">
                   <li v-for="c in project.contributions" :key="c">{{ c }}</li>
@@ -111,6 +124,17 @@
 
             <!-- Sidebar -->
             <aside class="detail-sidebar">
+              <div class="sidebar-block" v-if="project.stats">
+                <h3>By the numbers</h3>
+                <dl class="sidebar-stats">
+                  <div class="stat" v-for="item in project.stats.items" :key="item.label">
+                    <dt>{{ item.label }}</dt>
+                    <dd>{{ item.value }}</dd>
+                  </div>
+                </dl>
+                <p class="stats-period" v-if="project.stats.period">{{ project.stats.period }}</p>
+              </div>
+
               <div class="sidebar-block">
                 <h3>Technologies</h3>
                 <div class="sidebar-tech">
@@ -154,7 +178,7 @@ import info from '../../info'
 
 const FALLBACK = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500"%3E%3Crect width="800" height="500" fill="%23F7F9FC"/%3E%3Ctext x="50%25" y="50%25" font-family="sans-serif" font-size="18" fill="%23999" text-anchor="middle" dominant-baseline="middle"%3EScreenshot unavailable%3C/text%3E%3C/svg%3E'
 
-const MAX_INITIAL = 4
+const MAX_INITIAL = 5
 
 export default {
   name: 'ProjectDetail',
@@ -391,6 +415,9 @@ export default {
 
 .screenshot-figure {
   margin: 0;
+}
+
+.screenshot-frame {
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -398,14 +425,28 @@ export default {
   aspect-ratio: 16 / 10;
 }
 
-.dark-mode .screenshot-figure {
+.dark-mode .screenshot-frame {
   border-color: var(--color-dark-border);
   background-color: var(--color-dark-surface);
 }
 
 .screenshot-figure--featured {
   grid-column: 1 / -1;
+}
+
+.screenshot-figure--featured .screenshot-frame {
   aspect-ratio: 16 / 9;
+}
+
+.screenshot-caption {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.dark-mode .screenshot-caption {
+  color: var(--color-dark-text-secondary);
 }
 
 .screenshot-image {
@@ -486,6 +527,30 @@ export default {
   color: var(--color-dark-text-secondary);
 }
 
+.detail-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.highlight h3 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.dark-mode .highlight h3 {
+  color: var(--color-dark-text-primary);
+}
+
+.highlight p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
 /* Sidebar */
 .detail-sidebar {
   position: sticky;
@@ -525,6 +590,51 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+.sidebar-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.stat dd {
+  order: -1;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.dark-mode .stat dd {
+  color: var(--color-dark-text-primary);
+}
+
+.stat dt {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.dark-mode .stat dt {
+  color: var(--color-dark-text-secondary);
+}
+
+.stats-period {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.dark-mode .stats-period {
+  color: var(--color-dark-text-secondary);
 }
 
 .sidebar-link {

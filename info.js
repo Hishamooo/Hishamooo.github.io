@@ -77,10 +77,11 @@ let info = {
       description:
         "Develop and maintain SEDIWORK, a healthcare SaaS platform for hospital workforce and rotation planning, including an integrated LLM-powered assistant and complex scheduling and organisational workflows.",
       bullets: [
-        "Build complex planning workflows covering staff assignments, time periods, validation, conflicts, substitutions, notifications, plan publication and interactive clinic structures",
-        "Develop an LLM-powered assistant using structured application context, retrieval-augmented generation (RAG), system prompts and typed frontend-backend contracts to provide grounded planning answers",
-        "Deliver end-to-end features across Vue 3, Nuxt.js, TypeScript, Pinia, Directus services, custom APIs and PostgreSQL-backed workflows",
-        "Develop and maintain Cypress and Vitest coverage, investigate CI-specific failures and race conditions, and validate changes against functional and regression risks",
+        "Build the backend and context layer of SEDIWORK's LLM-powered planning assistant: RAG modules on shared TypeScript logic, a reactive context of the clinic and plan in view, and tools the model can call to find substitutes and check training progress",
+        "Designed and built the compact month view of the daily shift plan, plus backend rule checks (e.g. rest time after night shifts) that show warnings while planners drag doctors into shifts",
+        "Delivered the substitute feature end to end, then moved its logic from the browser into the backend so suggestions are computed once and stay consistent",
+        "Improve performance and usability of rotation planning, staffing boards, clinic structure and staff profiles across Vue 3, Nuxt, TypeScript, Pinia and Directus extensions",
+        "Set up Vitest for the backend extensions, maintain Cypress end-to-end suites, and handle framework and security upgrades",
         "Review pull requests daily across frontend and backend changes, focusing on functionality, architecture, test coverage and maintainability",
         "Maintain SEDIDOC's public WordPress website, including events, company content, SEO, responsive UI improvements and production stability"
       ],
@@ -187,31 +188,67 @@ let info = {
       name: "SEDIWORK",
       tagline: "Healthcare SaaS platform for hospital workforce and rotation planning",
       description:
-        "Healthcare SaaS platform for hospital workforce and rotation planning, including complex scheduling workflows and an integrated LLM-powered assistant.",
+        "Healthcare SaaS platform that plans the rotations and daily shifts of doctors in training across hospitals, with an integrated LLM-powered planning assistant. I started on the frontend and moved into full-stack work: backend extensions, shared TypeScript logic and the AI assistant.",
       role: "Software Developer",
       company: "SEDIDOC GmbH",
       date: "June 2022 – Present",
-      technologies: ["Vue 3", "Nuxt.js", "TypeScript", "Vuetify", "Pinia", "Directus", "PostgreSQL", "Cypress", "Vitest", "Docker"],
+      technologies: ["Vue 3", "Nuxt.js", "TypeScript", "Vuetify", "Pinia", "Directus", "PostgreSQL", "LLM / RAG", "Cypress", "Vitest", "Docker"],
+      stats: {
+        period: "November 2024 – October 2026",
+        items: [
+          { value: "~2,260", label: "commits" },
+          { value: "~170", label: "merged pull requests" },
+          { value: "~230", label: "engineering tickets" }
+        ]
+      },
       contributions: [
-        "Build complex planning workflows covering staff assignments, time periods, validation, conflicts, substitutions, notifications, plan publication and interactive clinic structures",
-        "Develop an LLM-powered assistant using structured application context, retrieval-augmented generation (RAG), system prompts and typed frontend-backend contracts to provide grounded planning answers",
-        "Deliver end-to-end features across Vue 3, Nuxt.js, TypeScript, Pinia, Directus services, custom APIs and PostgreSQL-backed workflows",
-        "Develop and maintain Cypress and Vitest coverage, investigate CI-specific failures and race conditions, and validate changes against functional and regression risks",
-        "Review pull requests daily across frontend and backend changes, focusing on functionality, architecture, test coverage and maintainability",
-        "Maintain SEDIDOC's public WordPress website, including events, company content, SEO, responsive UI improvements and production stability"
+        "Built the backend and context layer of the AI planning assistant: RAG modules on shared TypeScript logic, live planning context and tools the model can call",
+        "Designed and built the compact month view and backend rule-violation checks for the daily shift plan",
+        "Delivered the substitute feature end to end and moved its logic from the browser into the backend",
+        "Made manual planning faster and clearer on the rotation timeline and staffing board",
+        "Set up Vitest for backend extensions, maintain Cypress suites and review pull requests daily"
+      ],
+      highlights: [
+        {
+          title: "AI planning assistant",
+          text: "Planners ask planning questions in plain German and get answers grounded in the clinic's real data. I built the system that gives the model the right facts: a reactive context of the clinic, plan and view the user is looking at; RAG modules for staffing coverage, absences, training progress and substitute candidates, all reusing the same shared TypeScript logic as the app so the assistant and the screens agree; and tools the model can call to find substitutes and check training progress."
+        },
+        {
+          title: "Daily shift plan",
+          text: "When a planner drags a doctor into a shift, the backend checks the planning rules, such as rest time after a night shift, and the violation appears as a warning on the entry without blocking the plan. I also added shift groups, keyboard access to shift entries and publishing shifts to doctors from other facilities."
+        },
+        {
+          title: "Compact month view",
+          text: "Designed and built from scratch: a whole month of staffing on one screen, one row per shift and one cell per day, coloured by coverage. The colour logic is a single shared function used by both the compact and the detailed view, so they never disagree. I also fixed its print view and checked the result against the detailed print."
+        },
+        {
+          title: "Staffing board and substitutes",
+          text: "Built the substitute sidebar that suggests who can step in when a doctor is absent, fixed its edge cases (already-busy substitutes, part-time percentages, terminated contracts), then moved the whole substitute logic into the backend. Absences no longer delete full rotations, and planners can share plans with colleagues."
+        },
+        {
+          title: "Rotation timeline",
+          text: "The screen planners use most: an 18-month timeline with one row per doctor in training. I refactored the timespan table for smoother manual planning on large clinics, improved readability in the 6/12/18-month views, added navigation shortcuts and favourites, and fixed a series of data-consistency bugs."
+        },
+        {
+          title: "Clinic structure, staff and profiles",
+          text: "Gave facility planners read-only access to the clinic structure and made it responsive. Built filters and bulk invite actions for the rotating-staff list, overlap checks and wish history on profiles, and support for several training regulations per specialty and clinic."
+        },
+        {
+          title: "Engineering quality",
+          text: "Set up Vitest for the backend extensions, wrote and repaired Cypress end-to-end suites, fixed the Lighthouse and mail pipelines in CI, and handled framework and security upgrades. I review pull requests daily across frontend and backend."
+        }
       ],
       visit: "",
       ctaLabel: "View case study",
       pictures: [
-        { img: require("./src/assets/portfolio/sediworkv2/one.png"), alt: "SEDIWORK hospital rotation-planning interface" },
-        { img: require("./src/assets/portfolio/sediworkv2/two.png"), alt: "SEDIWORK scheduling workflow" },
-        { img: require("./src/assets/portfolio/sediworkv2/three.png"), alt: "SEDIWORK workforce management view" },
-        { img: require("./src/assets/portfolio/sediworkv2/four.png"), alt: "SEDIWORK rotation calendar" },
-        { img: require("./src/assets/portfolio/sediworkv2/five.png"), alt: "SEDIWORK substitution management" },
-        { img: require("./src/assets/portfolio/sediworkv2/six.png"), alt: "SEDIWORK notifications panel" },
-        { img: require("./src/assets/portfolio/sediworkv2/seven.png"), alt: "SEDIWORK planning dashboard" },
-        { img: require("./src/assets/portfolio/sediworkv2/eight.png"), alt: "SEDIWORK shift overview" },
-        { img: require("./src/assets/portfolio/sediworkv2/nine.png"), alt: "SEDIWORK user management" }
+        { img: require("./src/assets/portfolio/sediwork-v3/ai-assistant.jpg"), alt: "SEDIWORK AI planning assistant answering a staffing question", caption: "AI planning assistant answering which residents still need rotations, from the clinic's real planning data" },
+        { img: require("./src/assets/portfolio/sediwork-v3/staffing-board.jpg"), alt: "SEDIWORK staffing board with monthly staffing results per department", caption: "Staffing board: core staff and rotating doctors per department and month, with the result row showing staffing levels" },
+        { img: require("./src/assets/portfolio/sediwork-v3/daily-shift-plan.jpg"), alt: "SEDIWORK daily shift plan with rule-violation warnings", caption: "Daily shift plan: shifts per day, capacity per shift and warning badges for rule violations" },
+        { img: require("./src/assets/portfolio/sediwork-v3/compact-view.jpg"), alt: "SEDIWORK compact month view coloured by staffing", caption: "Compact month view I designed and built: a whole month of staffing on one screen" },
+        { img: require("./src/assets/portfolio/sediwork-v3/rotation-timeline.jpg"), alt: "SEDIWORK 18-month rotation timeline", caption: "Rotation timeline: 18 months, one row per doctor in training" },
+        { img: require("./src/assets/portfolio/sediwork-v3/unit-planning.jpg"), alt: "SEDIWORK unit planning inside a clinic", caption: "Unit planning for wards and teams below the department level" },
+        { img: require("./src/assets/portfolio/sediwork-v3/rotating-staff.jpg"), alt: "SEDIWORK list of rotating staff", caption: "Rotating staff list with filters, experience and account status" },
+        { img: require("./src/assets/portfolio/sediwork-v3/clinic-structure.jpg"), alt: "SEDIWORK clinic structure organisation chart", caption: "Clinic structure from hospital group down to departments and units" }
       ]
     },
     {
