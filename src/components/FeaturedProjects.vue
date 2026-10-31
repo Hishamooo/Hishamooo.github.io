@@ -18,8 +18,8 @@
           <div class="featured-screenshot">
             <div class="screenshot-container">
               <img
-                :src="project.pictures[0].img"
-                :alt="project.pictures[0].alt"
+                :src="(project.cover || project.pictures[0]).img"
+                :alt="(project.cover || project.pictures[0]).alt"
                 class="screenshot-img"
                 loading="lazy"
                 width="560"
