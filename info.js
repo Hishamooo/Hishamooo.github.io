@@ -227,7 +227,7 @@ let info = {
         },
         {
           title: "Rotation timeline",
-          text: "The screen planners use most: an 18-month timeline with one row per doctor in training. I refactored the timespan table for smoother manual planning on large clinics, improved readability in the 6/12/18-month views, added navigation shortcuts and favourites, and fixed a series of data-consistency bugs."
+          text: "The screen planners use most: a 6, 12 or 18-month timeline with one row per doctor in training. I refactored the timespan table for smoother manual planning on large clinics, improved readability in the 6/12/18-month views, added navigation shortcuts and favourites, and fixed a series of data-consistency bugs."
         },
         {
           title: "Clinic structure, staff and profiles",
@@ -245,7 +245,7 @@ let info = {
         { img: require("./src/assets/portfolio/sediwork-v3/staffing-board.jpg"), alt: "SEDIWORK staffing board with monthly staffing results per department", caption: "Staffing board: core staff and rotating doctors per department and month, with the result row showing staffing levels" },
         { img: require("./src/assets/portfolio/sediwork-v3/daily-shift-plan.jpg"), alt: "SEDIWORK daily shift plan with rule-violation warnings", caption: "Daily shift plan: shifts per day, capacity per shift and warning badges for rule violations" },
         { img: require("./src/assets/portfolio/sediwork-v3/compact-view.jpg"), alt: "SEDIWORK compact month view coloured by staffing", caption: "Compact month view I designed and built: a whole month of staffing on one screen" },
-        { img: require("./src/assets/portfolio/sediwork-v3/rotation-timeline.jpg"), alt: "SEDIWORK 18-month rotation timeline", caption: "Rotation timeline: 18 months, one row per doctor in training" },
+        { img: require("./src/assets/portfolio/sediwork-v3/rotation-timeline.jpg"), alt: "SEDIWORK 12-month rotation timeline", caption: "Rotation timeline in the 12-month view, one row per doctor in training" },
         { img: require("./src/assets/portfolio/sediwork-v3/unit-planning.jpg"), alt: "SEDIWORK unit planning inside a clinic", caption: "Unit planning for wards and teams below the department level" },
         { img: require("./src/assets/portfolio/sediwork-v3/rotating-staff.jpg"), alt: "SEDIWORK list of rotating staff", caption: "Rotating staff list with filters, experience and account status" },
         { img: require("./src/assets/portfolio/sediwork-v3/clinic-structure.jpg"), alt: "SEDIWORK clinic structure organisation chart", caption: "Clinic structure from hospital group down to departments and units" }
