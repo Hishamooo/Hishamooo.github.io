@@ -188,11 +188,12 @@ let info = {
       name: "SEDIWORK",
       tagline: "Healthcare SaaS platform for hospital workforce and rotation planning",
       description:
-        "Healthcare SaaS platform that plans the rotations and daily shifts of doctors in training across hospitals, with an integrated LLM-powered planning assistant. I started on the frontend and moved into full-stack work: backend extensions, shared TypeScript logic and the AI assistant.",
-      role: "Software Developer",
+        "Healthcare SaaS platform that plans the rotations and daily shifts of doctors in training across hospitals. I work mainly on the planning screens in Vue 3, Nuxt and Vuetify: the rotation timeline, the staffing board and the daily shift plan. Over time I took on full-stack work as well: backend extensions, shared TypeScript logic and the AI planning assistant.",
+      roleLabel: "Frontend-focused Software Engineer",
+      role: "Software Engineer (frontend focus)",
       company: "SEDIDOC GmbH",
-      date: "June 2022 – Present",
-      technologies: ["Vue 3", "Nuxt.js", "TypeScript", "Vuetify", "Pinia", "Directus", "PostgreSQL", "LLM / RAG", "Cypress", "Vitest", "Docker"],
+      date: "August 2023 – Present",
+      technologies: ["Vue 3", "Nuxt.js", "TypeScript", "Vuetify", "Pinia", "Cypress", "Vitest", "Directus", "PostgreSQL", "LLM / RAG", "Docker"],
       contributions: [
         "Built the backend and context layer of the AI planning assistant: RAG modules on shared TypeScript logic, live planning context and tools the model can call",
         "Designed and built the compact month view and backend rule-violation checks for the daily shift plan",
@@ -202,45 +203,46 @@ let info = {
       ],
       highlights: [
         {
-          title: "AI planning assistant",
-          text: "Planners ask planning questions in plain German and get answers grounded in the clinic's real data. I built the system that gives the model the right facts: a reactive context of the clinic, plan and view the user is looking at; RAG modules for staffing coverage, absences, training progress and substitute candidates, all reusing the same shared TypeScript logic as the app so the assistant and the screens agree; and tools the model can call to find substitutes and check training progress."
-        },
-        {
-          title: "Daily shift plan",
-          text: "When a planner drags a doctor into a shift, the backend checks the planning rules, such as rest time after a night shift, and the violation appears as a warning on the entry without blocking the plan. I also added shift groups, keyboard access to shift entries and publishing shifts to doctors from other facilities."
-        },
-        {
           title: "Compact month view",
-          text: "Designed and built from scratch: a whole month of staffing on one screen, one row per shift and one cell per day, coloured by coverage. The colour logic is a single shared function used by both the compact and the detailed view, so they never disagree. I also fixed its print view and checked the result against the detailed print."
-        },
-        {
-          title: "Staffing board and substitutes",
-          text: "Built the substitute sidebar that suggests who can step in when a doctor is absent, fixed its edge cases (already-busy substitutes, part-time percentages, terminated contracts), then moved the whole substitute logic into the backend. Absences no longer delete full rotations, and planners can share plans with colleagues."
+          text: "Designed and built from scratch: a whole month of staffing on one screen, one row per shift and one cell per day, coloured by coverage. The colour logic is a single shared function used by both the compact and the detailed view, so the two never disagree. I also rebuilt its print view and verified the printout pixel by pixel against the detailed print, so the change broke nothing else."
         },
         {
           title: "Rotation timeline",
-          text: "The screen planners use most: a 6, 12 or 18-month timeline with one row per doctor in training. I refactored the timespan table for smoother manual planning on large clinics, improved readability in the 6/12/18-month views, added navigation shortcuts and favourites, and fixed a series of data-consistency bugs."
+          text: "The screen planners use most: a 6, 12 or 18-month timeline with one row per doctor in training. I refactored the timespan table so manual planning stays smooth on large clinics, made names and departments abbreviate cleanly at every zoom level, added a \"today\" marker, scroll-to-person navigation and saved favourite views, and fixed a series of data-consistency bugs. This board is the component I have changed most in the codebase."
+        },
+        {
+          title: "Staffing board and substitutes",
+          text: "Built the substitute sidebar that suggests who can step in when a doctor is absent and fixed its edge cases (already-busy substitutes, part-time percentages, terminated contracts). Then I moved the whole substitute logic into the backend so the board and the API agree. Absences no longer delete full rotations, and planners can share plans with colleagues."
+        },
+        {
+          title: "Daily shift plan",
+          text: "Keyboard access to every shift entry, a selected row that stays in view when the table re-flows, and shift groups. When a planner drags a doctor into a shift, the backend checks the planning rules, such as rest time after a night shift, and the violation appears as a warning on the entry without blocking the plan. Shifts can also be published to doctors from other facilities."
         },
         {
           title: "Clinic structure, staff and profiles",
-          text: "Gave facility planners read-only access to the clinic structure and made it responsive. Built filters and bulk invite actions for the rotating-staff list, overlap checks and wish history on profiles, and support for several training regulations per specialty and clinic."
+          text: "Read-only clinic-structure access for facility planners and a responsive org chart. Filters and bulk invite/email actions for the rotating-staff list. Overlap checks, wish history and prefilled start dates on doctor profiles. Support for several training regulations per specialty and clinic."
+        },
+        {
+          title: "AI planning assistant (full-stack)",
+          text: "Planners ask planning questions in plain German. I built the backend that gives the model the right facts: a reactive context of the clinic, plan and view the user is looking at; retrieval modules for staffing coverage, absences, training progress and substitute candidates, all reusing the same shared TypeScript logic as the app; and tools the model can call to find substitutes and check training progress."
         },
         {
           title: "Engineering quality",
-          text: "Set up Vitest for the backend extensions, wrote and repaired Cypress end-to-end suites, fixed the Lighthouse and mail pipelines in CI, and handled framework and security upgrades. I review pull requests daily across frontend and backend."
+          text: "Set up Vitest for the backend extensions, wrote and repaired Cypress end-to-end suites, fixed the Lighthouse and mail pipelines in CI, and handled framework and security upgrades (Vuetify 3.9, iOS SDK, Node.js runtime). I regularly review pull requests across frontend and backend."
         }
       ],
       visit: "",
       ctaLabel: "View case study",
+      screenshotNote: "All screenshots show generated demo data: no real doctors, patients or hospitals.",
       pictures: [
-        { img: require("./src/assets/portfolio/sediwork-v3/ai-assistant.jpg"), alt: "SEDIWORK AI planning assistant answering a staffing question", caption: "AI planning assistant answering which residents still need rotations, from the clinic's real planning data" },
-        { img: require("./src/assets/portfolio/sediwork-v3/staffing-board.jpg"), alt: "SEDIWORK staffing board with monthly staffing results per department", caption: "Staffing board: core staff and rotating doctors per department and month, with the result row showing staffing levels" },
-        { img: require("./src/assets/portfolio/sediwork-v3/daily-shift-plan.jpg"), alt: "SEDIWORK daily shift plan with rule-violation warnings", caption: "Daily shift plan: shifts per day, capacity per shift and warning badges for rule violations" },
-        { img: require("./src/assets/portfolio/sediwork-v3/compact-view.jpg"), alt: "SEDIWORK compact month view coloured by staffing", caption: "Compact month view I designed and built: a whole month of staffing on one screen" },
-        { img: require("./src/assets/portfolio/sediwork-v3/rotation-timeline.jpg"), alt: "SEDIWORK 12-month rotation timeline", caption: "Rotation timeline in the 12-month view, one row per doctor in training" },
-        { img: require("./src/assets/portfolio/sediwork-v3/unit-planning.jpg"), alt: "SEDIWORK unit planning inside a clinic", caption: "Unit planning for wards and teams below the department level" },
-        { img: require("./src/assets/portfolio/sediwork-v3/rotating-staff.jpg"), alt: "SEDIWORK list of rotating staff", caption: "Rotating staff list with filters, experience and account status" },
-        { img: require("./src/assets/portfolio/sediwork-v3/clinic-structure.jpg"), alt: "SEDIWORK clinic structure organisation chart", caption: "Clinic structure from hospital group down to departments and units" }
+        { img: require("./src/assets/portfolio/sediwork-v3/compact-view-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/compact-view-full.jpg"), alt: "SEDIWORK compact month view of the shift plan, coloured by staffing", caption: "Compact month view I designed and built: a whole month of staffing on one screen" },
+        { img: require("./src/assets/portfolio/sediwork-v3/rotation-timeline-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/rotation-timeline-full.jpg"), alt: "SEDIWORK 12-month rotation timeline", caption: "Rotation timeline, one row per doctor in training" },
+        { img: require("./src/assets/portfolio/sediwork-v3/staffing-board-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/staffing-board-full.jpg"), alt: "SEDIWORK staffing board with monthly results per department", caption: "Staffing board: core staff and rotating doctors per month, with the result row showing staffing levels" },
+        { img: require("./src/assets/portfolio/sediwork-v3/daily-shift-plan-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/daily-shift-plan-full.jpg"), alt: "SEDIWORK daily shift plan with rule-violation warnings", caption: "Daily shift plan: capacity per shift and warning badges for rule violations" },
+        { img: require("./src/assets/portfolio/sediwork-v3/ai-assistant-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/ai-assistant-full.jpg"), alt: "SEDIWORK AI planning assistant answering a training question", caption: "AI planning assistant summarising which mandatory rotations residents still need" },
+        { img: require("./src/assets/portfolio/sediwork-v3/unit-planning-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/unit-planning-full.jpg"), alt: "SEDIWORK unit planning inside a clinic", caption: "Unit planning inside a clinic" },
+        { img: require("./src/assets/portfolio/sediwork-v3/staff-list-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/staff-list-full.jpg"), alt: "SEDIWORK list of rotating staff", caption: "Rotating-staff list with filters and bulk actions" },
+        { img: require("./src/assets/portfolio/sediwork-v3/clinic-structure-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/clinic-structure-full.jpg"), alt: "SEDIWORK clinic structure organisation chart", caption: "Clinic structure as an organisation chart" }
       ]
     },
     {

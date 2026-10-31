@@ -32,7 +32,7 @@
         <header class="detail-hero">
           <div class="container">
             <div class="detail-meta">
-              <span class="detail-category">{{ project.role }}</span>
+              <span class="detail-category">{{ project.roleLabel || project.role }}</span>
               <span class="detail-date">{{ project.date }}</span>
             </div>
             <h1 class="detail-title">{{ project.name }}</h1>
@@ -66,7 +66,13 @@
                 class="screenshot-figure"
                 :class="{ 'screenshot-figure--featured': idx === 0 }"
               >
-                <div class="screenshot-frame">
+                <a
+                  class="screenshot-frame"
+                  :href="pic.full || pic.img"
+                  target="_blank"
+                  rel="noopener"
+                  :aria-label="'Open full screenshot: ' + pic.alt"
+                >
                   <img
                     :src="pic.img"
                     :alt="pic.alt"
@@ -74,10 +80,11 @@
                     :loading="idx === 0 ? 'eager' : 'lazy'"
                     @error="onImgError($event)"
                   />
-                </div>
+                </a>
                 <figcaption v-if="pic.caption" class="screenshot-caption">{{ pic.caption }}</figcaption>
               </figure>
             </div>
+            <p v-if="project.screenshotNote" class="screenshot-note">{{ project.screenshotNote }}</p>
             <button
               v-if="hasMoreScreenshots"
               class="btn btn-outline btn-sm show-more-btn"
@@ -408,6 +415,7 @@ export default {
 }
 
 .screenshot-frame {
+  display: block;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -421,6 +429,21 @@ export default {
 
 .screenshot-figure--featured {
   grid-column: 1 / -1;
+}
+
+.screenshot-frame:hover,
+.screenshot-frame:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.screenshot-note {
+  margin: 0 0 24px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.dark-mode .screenshot-note {
+  color: var(--color-dark-text-secondary);
 }
 
 .screenshot-caption {
