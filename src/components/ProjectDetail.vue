@@ -399,6 +399,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  align-items: start;
   margin-bottom: 24px;
 }
 
@@ -411,7 +412,6 @@ export default {
   overflow: hidden;
   border: 1px solid var(--color-border);
   background-color: var(--color-background-subtle);
-  aspect-ratio: 16 / 10;
 }
 
 .dark-mode .screenshot-frame {
@@ -421,10 +421,6 @@ export default {
 
 .screenshot-figure--featured {
   grid-column: 1 / -1;
-}
-
-.screenshot-figure--featured .screenshot-frame {
-  aspect-ratio: 16 / 9;
 }
 
 .screenshot-caption {
@@ -440,9 +436,7 @@ export default {
 
 .screenshot-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
   display: block;
 }
 
