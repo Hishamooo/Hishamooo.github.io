@@ -124,17 +124,6 @@
 
             <!-- Sidebar -->
             <aside class="detail-sidebar">
-              <div class="sidebar-block" v-if="project.stats">
-                <h3>By the numbers</h3>
-                <dl class="sidebar-stats">
-                  <div class="stat" v-for="item in project.stats.items" :key="item.label">
-                    <dt>{{ item.label }}</dt>
-                    <dd>{{ item.value }}</dd>
-                  </div>
-                </dl>
-                <p class="stats-period" v-if="project.stats.period">{{ project.stats.period }}</p>
-              </div>
-
               <div class="sidebar-block">
                 <h3>Technologies</h3>
                 <div class="sidebar-tech">
@@ -590,51 +579,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-}
-
-.sidebar-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 0;
-}
-
-.stat {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-}
-
-.stat dd {
-  order: -1;
-  margin: 0;
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--color-primary);
-}
-
-.dark-mode .stat dd {
-  color: var(--color-dark-text-primary);
-}
-
-.stat dt {
-  font-size: 14px;
-  color: var(--color-text-secondary);
-}
-
-.dark-mode .stat dt {
-  color: var(--color-dark-text-secondary);
-}
-
-.stats-period {
-  margin: 14px 0 0;
-  font-size: 13px;
-  color: var(--color-text-secondary);
-}
-
-.dark-mode .stats-period {
-  color: var(--color-dark-text-secondary);
 }
 
 .sidebar-link {

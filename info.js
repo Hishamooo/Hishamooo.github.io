@@ -193,14 +193,6 @@ let info = {
       company: "SEDIDOC GmbH",
       date: "June 2022 – Present",
       technologies: ["Vue 3", "Nuxt.js", "TypeScript", "Vuetify", "Pinia", "Directus", "PostgreSQL", "LLM / RAG", "Cypress", "Vitest", "Docker"],
-      stats: {
-        period: "November 2024 – October 2026",
-        items: [
-          { value: "~2,260", label: "commits" },
-          { value: "~170", label: "merged pull requests" },
-          { value: "~230", label: "engineering tickets" }
-        ]
-      },
       contributions: [
         "Built the backend and context layer of the AI planning assistant: RAG modules on shared TypeScript logic, live planning context and tools the model can call",
         "Designed and built the compact month view and backend rule-violation checks for the daily shift plan",
