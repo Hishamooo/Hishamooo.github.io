@@ -90,15 +90,15 @@ let info = {
     {
       name: "DISHIFY LTD",
       place: "United Kingdom — Remote, Part-Time",
-      date: "May 2024 – Present",
+      date: "May 2024 – April 2026",
       position: "Software Engineer",
       description:
-        "Developing an AI-powered meal-planning mobile application delivering personalised recipe and meal experiences.",
+        "Developed an AI-powered meal-planning mobile application delivering personalised recipe and meal experiences.",
       bullets: [
-        "Develop a Flutter mobile application for AI-powered meal planning and recipe experiences, with a strong focus on onboarding, animation and responsive mobile UX",
-        "Integrate frontend flows with AI services, Firebase authentication, real-time data and REST APIs to deliver personalised and dynamic content",
-        "Implement and maintain subscription and payment workflows using Stripe and mobile in-app purchases",
-        "Work across application architecture, UI development and third-party service integrations to deliver production-ready mobile features"
+        "Developed a Flutter mobile application for AI-powered meal planning and recipe experiences, with a strong focus on onboarding, animation and responsive mobile UX",
+        "Integrated frontend flows with AI services, Firebase authentication, real-time data and REST APIs to deliver personalised and dynamic content",
+        "Implemented and maintained subscription and payment workflows using Stripe and mobile in-app purchases",
+        "Worked across application architecture, UI development and third-party service integrations to deliver production-ready mobile features"
       ],
       skills: ["Flutter", "Dart", "Firebase", "REST APIs", "Stripe", "In-app purchases"],
       partTime: true
@@ -285,13 +285,13 @@ let info = {
         "AI-powered meal-planning mobile application delivering personalised recipe and meal experiences.",
       role: "Software Engineer — Part-Time",
       company: "DISHIFY LTD",
-      date: "May 2024 – Present",
+      date: "May 2024 – April 2026",
       technologies: ["Flutter", "Dart", "Firebase", "REST APIs", "Stripe", "In-app purchases"],
       contributions: [
-        "Develop a Flutter mobile application for AI-powered meal planning and recipe experiences, with a strong focus on onboarding, animation and responsive mobile UX",
-        "Integrate frontend flows with AI services, Firebase authentication, real-time data and REST APIs to deliver personalised and dynamic content",
-        "Implement and maintain subscription and payment workflows using Stripe and mobile in-app purchases",
-        "Work across application architecture, UI development and third-party service integrations to deliver production-ready mobile features"
+        "Developed a Flutter mobile application for AI-powered meal planning and recipe experiences, with a strong focus on onboarding, animation and responsive mobile UX",
+        "Integrated frontend flows with AI services, Firebase authentication, real-time data and REST APIs to deliver personalised and dynamic content",
+        "Implemented and maintained subscription and payment workflows using Stripe and mobile in-app purchases",
+        "Worked across application architecture, UI development and third-party service integrations to deliver production-ready mobile features"
       ],
       visit: "https://apps.apple.com/no/app/dishify-ai-recipe-generator/id6739636734?platform=iphone",
       ctaLabel: "View application",
