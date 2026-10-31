@@ -189,6 +189,7 @@ let info = {
       tagline: "Healthcare SaaS platform for hospital workforce and rotation planning",
       description:
         "Healthcare SaaS platform that plans the rotations and daily shifts of doctors in training across hospitals. I work mainly on the planning screens in Vue 3, Nuxt and Vuetify: the rotation timeline, the staffing board and the daily shift plan. Over time I took on full-stack work as well: backend extensions, shared TypeScript logic and the AI planning assistant.",
+      stats: "147 merged pull requests · 216 delivered tickets (Nov 2024 – Oct 2026)",
       roleLabel: "Frontend-focused Software Engineer",
       role: "Software Engineer (frontend focus)",
       company: "SEDIDOC GmbH",
@@ -235,14 +236,14 @@ let info = {
       ctaLabel: "View case study",
       screenshotNote: "All screenshots show generated demo data: no real doctors, patients or hospitals.",
       pictures: [
-        { img: require("./src/assets/portfolio/sediwork-v3/compact-view-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/compact-view-full.jpg"), alt: "SEDIWORK compact month view of the shift plan, coloured by staffing", caption: "Compact month view I designed and built: a whole month of staffing on one screen" },
-        { img: require("./src/assets/portfolio/sediwork-v3/rotation-timeline-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/rotation-timeline-full.jpg"), alt: "SEDIWORK 12-month rotation timeline", caption: "Rotation timeline, one row per doctor in training" },
-        { img: require("./src/assets/portfolio/sediwork-v3/staffing-board-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/staffing-board-full.jpg"), alt: "SEDIWORK staffing board with monthly results per department", caption: "Staffing board: core staff and rotating doctors per month, with the result row showing staffing levels" },
-        { img: require("./src/assets/portfolio/sediwork-v3/daily-shift-plan-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/daily-shift-plan-full.jpg"), alt: "SEDIWORK daily shift plan with rule-violation warnings", caption: "Daily shift plan: capacity per shift and warning badges for rule violations" },
-        { img: require("./src/assets/portfolio/sediwork-v3/ai-assistant-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/ai-assistant-full.jpg"), alt: "SEDIWORK AI planning assistant answering a training question", caption: "AI planning assistant summarising which mandatory rotations residents still need" },
-        { img: require("./src/assets/portfolio/sediwork-v3/unit-planning-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/unit-planning-full.jpg"), alt: "SEDIWORK unit planning inside a clinic", caption: "Unit planning inside a clinic" },
-        { img: require("./src/assets/portfolio/sediwork-v3/staff-list-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/staff-list-full.jpg"), alt: "SEDIWORK list of rotating staff", caption: "Rotating-staff list with filters and bulk actions" },
-        { img: require("./src/assets/portfolio/sediwork-v3/clinic-structure-closeup.jpg"), full: require("./src/assets/portfolio/sediwork-v3/clinic-structure-full.jpg"), alt: "SEDIWORK clinic structure organisation chart", caption: "Clinic structure as an organisation chart" }
+        { img: require("./src/assets/portfolio/sediwork-v3/compact-view-full.jpg"), alt: "SEDIWORK compact month view of the shift plan, coloured by staffing", caption: "Compact month view I designed and built: a whole month of staffing on one screen" },
+        { img: require("./src/assets/portfolio/sediwork-v3/rotation-timeline-full.jpg"), alt: "SEDIWORK 12-month rotation timeline", caption: "Rotation timeline, one row per doctor in training" },
+        { img: require("./src/assets/portfolio/sediwork-v3/staffing-board-full.jpg"), alt: "SEDIWORK staffing board with monthly results per department", caption: "Staffing board: core staff and rotating doctors per month, with the result row showing staffing levels" },
+        { img: require("./src/assets/portfolio/sediwork-v3/daily-shift-plan-full.jpg"), alt: "SEDIWORK daily shift plan with rule-violation warnings", caption: "Daily shift plan: capacity per shift and warning badges for rule violations" },
+        { img: require("./src/assets/portfolio/sediwork-v3/ai-assistant-full.jpg"), alt: "SEDIWORK AI planning assistant answering a training question", caption: "AI planning assistant summarising which mandatory rotations residents still need" },
+        { img: require("./src/assets/portfolio/sediwork-v3/unit-planning-full.jpg"), alt: "SEDIWORK unit planning inside a clinic", caption: "Unit planning inside a clinic" },
+        { img: require("./src/assets/portfolio/sediwork-v3/staff-list-full.jpg"), alt: "SEDIWORK list of rotating staff", caption: "Rotating-staff list with filters and bulk actions" },
+        { img: require("./src/assets/portfolio/sediwork-v3/clinic-structure-full.jpg"), alt: "SEDIWORK clinic structure organisation chart", caption: "Clinic structure as an organisation chart" }
       ]
     },
     {

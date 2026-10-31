@@ -64,11 +64,10 @@
                 v-for="(pic, idx) in visibleScreenshots"
                 :key="idx"
                 class="screenshot-figure"
-                :class="{ 'screenshot-figure--featured': idx === 0 }"
               >
                 <a
                   class="screenshot-frame"
-                  :href="pic.full || pic.img"
+                  :href="pic.img"
                   target="_blank"
                   rel="noopener"
                   :aria-label="'Open full screenshot: ' + pic.alt"
@@ -103,6 +102,7 @@
               <section class="detail-section" aria-labelledby="overview-heading" v-if="project.description">
                 <h2 id="overview-heading">Project overview</h2>
                 <p>{{ project.description }}</p>
+                <p v-if="project.stats" class="detail-stats">{{ project.stats }}</p>
               </section>
 
               <section class="detail-section" aria-labelledby="role-heading" v-if="project.role">
@@ -404,9 +404,8 @@ export default {
 
 .screenshots-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 40px;
   margin-bottom: 24px;
 }
 
@@ -420,15 +419,12 @@ export default {
   overflow: hidden;
   border: 1px solid var(--color-border);
   background-color: var(--color-background-subtle);
+  box-shadow: var(--shadow-card);
 }
 
 .dark-mode .screenshot-frame {
   border-color: var(--color-dark-border);
   background-color: var(--color-dark-surface);
-}
-
-.screenshot-figure--featured {
-  grid-column: 1 / -1;
 }
 
 .screenshot-frame:hover,
@@ -509,6 +505,11 @@ export default {
 
 .dark-mode .detail-section p {
   color: var(--color-dark-text-secondary);
+}
+
+.detail-section p.detail-stats {
+  font-size: 14px;
+  margin-top: 12px;
 }
 
 .detail-section p.text-secondary {
@@ -662,14 +663,6 @@ export default {
 
   .detail-sidebar {
     position: static;
-  }
-
-  .screenshots-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .screenshot-figure--featured {
-    grid-column: auto;
   }
 }
 </style>
