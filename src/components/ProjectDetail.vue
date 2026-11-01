@@ -120,7 +120,6 @@
               <section class="detail-section" aria-labelledby="overview-heading" v-if="project.description">
                 <h2 id="overview-heading">Project overview</h2>
                 <p>{{ project.description }}</p>
-                <p v-if="project.stats" class="detail-stats">{{ project.stats }}</p>
               </section>
 
               <section class="detail-section" aria-labelledby="role-heading" v-if="project.role">
@@ -523,11 +522,6 @@ export default {
 
 .dark-mode .detail-section p {
   color: var(--color-dark-text-secondary);
-}
-
-.detail-section p.detail-stats {
-  font-size: 14px;
-  margin-top: 12px;
 }
 
 .detail-section p.text-secondary {

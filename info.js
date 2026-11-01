@@ -189,7 +189,6 @@ let info = {
       tagline: "Healthcare SaaS platform for hospital workforce and rotation planning",
       description:
         "Healthcare SaaS platform that plans the rotations and daily shifts of doctors in training across hospitals. I work mainly on the planning screens in Vue 3, Nuxt and Vuetify: the rotation timeline, the staffing board and the daily shift plan. Over time I took on full-stack work as well: backend extensions, shared TypeScript logic and the AI planning assistant.",
-      stats: "147 merged pull requests · 216 delivered tickets (Nov 2024 – Oct 2026)",
       roleLabel: "Frontend-focused Software Engineer",
       role: "Software Engineer (frontend focus)",
       company: "SEDIDOC GmbH",
