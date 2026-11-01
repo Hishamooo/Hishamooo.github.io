@@ -192,7 +192,7 @@ let info = {
       roleLabel: "Frontend-focused Software Engineer",
       role: "Software Engineer (frontend focus)",
       company: "SEDIDOC GmbH",
-      date: "August 2023 – Present",
+      date: "June 2022 – Present",
       technologies: ["Vue 3", "Nuxt.js", "TypeScript", "Vuetify", "Pinia", "Cypress", "Vitest", "Directus", "PostgreSQL", "LLM / RAG", "Docker"],
       contributions: [
         "Built the backend and context layer of the AI planning assistant: RAG modules on shared TypeScript logic, live planning context and tools the model can call",
